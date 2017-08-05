@@ -1,0 +1,42 @@
+{
+  "name": "users",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava --serial --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ava": "^0.21.0",
+    "babel-plugin-dynamic-import-node": "^1.0.2",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-1": "^6.24.1",
+    "blue-tape": "^1.0.0",
+    "mocha": "^3.4.2",
+    "mongomem": "^0.1.9",
+    "mongoose": "^4.11.4",
+    "nodemon": "^1.11.0",
+    "tap-summary": "^3.0.2",
+    "tape": "^4.7.0",
+    "tape-async": "^2.3.0"
+  },
+  "ava": {
+    "require": [
+      "babel-register",
+      "babel-polyfill"
+    ],
+    "babel": "inherit",
+    "files": [
+      "test/tests/*.js"
+    ],
+    "source": [
+      "src/*.js",
+      "test/test_helper.js"
+    ]
+  }
+}
